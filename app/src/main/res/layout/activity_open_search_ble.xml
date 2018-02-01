@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yfhuang.ble_led_controller.OpenSearchBLEActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSearchBLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="搜索BLE设备" />
+
+        <ListView
+            android:id="@+id/BLEList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </ListView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/gobtn"
+            android:text="go"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

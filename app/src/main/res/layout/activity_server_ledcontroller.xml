@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.yfhuang.ble_led_controller.ServerLEDControllerActivity">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="字词" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnPaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绘画" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnChess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="棋类" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其它" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWriteRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="读写" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSendOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="送显" />
+
+        <!--<android.support.v7.widget.AppCompatButton-->
+        <!--android:id="@+id/LED4"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="4x32" />-->
+
+        <!--<android.support.v7.widget.AppCompatButton-->
+        <!--android:id="@+id/LED64"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="64x64" />-->
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/btnOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="ToggleButton"
+                android:textOff="电源-开"
+                android:textOn="电源-关" />
+
+            <!--<RadioGroup-->
+            <!--android:id="@+id/radioGroup"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:orientation="horizontal">-->
+
+                <RadioButton
+                    android:id="@+id/btnRadioLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="灯" />
+
+                <RadioButton
+                    android:id="@+id/btnRadioScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="屏" />
+
+                <RadioButton
+                    android:id="@+id/btnRadioNightLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="夜灯" />
+            <!--</RadioGroup>-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="暗" />
+
+                <SeekBar
+                    android:id="@+id/barBrightness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="100dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="亮" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.yfhuang.ble_led_controller.MyView
+                android:id="@+id/myView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.example.yfhuang.ble_led_controller.PaintView
+                android:id="@+id/myPaint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/myImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="静态" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnFlashing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="闪烁" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnFlow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="流动" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnRotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="旋转" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnMarching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="迸发" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置" />
+
+        <!--<android.support.v7.widget.AppCompatButton-->
+        <!--android:id="@+id/LED642"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="128*64" />-->
+
+        <!--<android.support.v7.widget.AppCompatButton-->
+        <!--android:id="@+id/LED6128"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="128*128" />-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
